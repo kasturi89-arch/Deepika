@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <title>Video Call</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         BACKGROUND
+    ========================================================== -->
+
+    <div class="background-layer" aria-hidden="true">
+
+        <video
+            id="backgroundVideo"
+            class="background-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        >
+            <source
+                src="assets/videos/background.mp4"
+                type="video/mp4"
+            >
+        </video>
+
+        <div class="background-overlay"></div>
+        <div class="background-vignette"></div>
+
+    </div>
+
+
+    <!-- =========================================================
+         PAGE
+    ========================================================== -->
+
+    <main class="content-layer">
+
+
+        <!-- =====================================================
+             ACTIVE NOW
+        ====================================================== -->
+
+        <div
+            class="status-section"
+            aria-label="Current profile status"
+        >
+
+            <span
+                class="status-dot"
+                aria-hidden="true"
+            ></span>
+
+            <span class="status-text">
+                ACTIVE NOW
+            </span>
+
+        </div>
+
+
+        <!-- =====================================================
+             PROFILE SECTION
+        ====================================================== -->
+
+        <section
+            class="profile-section"
+            aria-label="Profile"
+        >
+
+
+            <!-- PREVIOUS -->
+
+            <button
+                type="button"
+                id="previousProfile"
+                class="profile-nav profile-nav--previous"
+                aria-label="Previous profile"
+            >
+
+                <i
+                    class="fa-solid fa-chevron-left"
+                    aria-hidden="true"
+                ></i>
+
+            </button>
+
+
+            <!-- PROFILE CONTENT -->
+
+            <div class="profile-content">
+
+
+                <!-- PROFILE PHOTO -->
+
+                <div class="profile-image-wrapper">
+
+                    <img
+                        id="profileImage"
+                        class="profile-image"
+                        src="assets/profiles/profile1.jpg"
+                        alt="Profile photo"
+                    >
+
+                </div>
+
+
+                <!-- PROFILE INFORMATION -->
+
+                <div class="profile-info">
+
+
+                    <!-- NAME + VERIFIED -->
+
+                    <div class="profile-name-row">
+
+                        <h1 id="profileName">
+                            Pavithra
+                        </h1>
+
+                        <img
+                            id="verifiedBadge"
+                            class="verified-badge"
+                            src="assets/icons/verified.png"
+                            alt="Verified"
+                        >
+
+                    </div>
+
+
+                    <!-- BIO -->
+
+                    <p
+                        id="profileBio"
+                        class="profile-bio"
+                    >
+                        Living, Laughing &amp; Loving Life ✨
+                    </p>
+
+
+                    <!-- PROFILE META -->
+
+                    <div class="profile-meta">
+
+
+                        <span class="meta-item">
+
+                            <i
+                                class="fa-solid fa-location-dot"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span id="profilePlace">
+                                Kerala
+                            </span>
+
+                        </span>
+
+
+                        <span
+                            class="meta-separator"
+                            aria-hidden="true"
+                        >
+                            •
+                        </span>
+
+
+                        <span class="meta-item">
+
+                            <i
+                                class="fa-solid fa-cake-candles"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span id="profileAge">
+                                27
+                            </span>
+
+                        </span>
+
+
+                        <span
+                            class="meta-separator"
+                            aria-hidden="true"
+                        >
+                            •
+                        </span>
+
+
+                        <span class="meta-item">
+
+                            <i
+                                class="fa-solid fa-heart"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span id="profileStatus">
+                                Single
+                            </span>
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NEXT -->
+
+            <button
+                type="button"
+                id="nextProfile"
+                class="profile-nav profile-nav--next"
+                aria-label="Next profile"
+            >
+
+                <i
+                    class="fa-solid fa-chevron-right"
+                    aria-hidden="true"
+                ></i>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ACTION CARDS
+        ====================================================== -->
+
+        <section
+            class="actions-section"
+            aria-label="Profile links"
+        >
+
+
+            <!-- =================================================
+                 BIO
+            ================================================== -->
+
+            <a
+                href="upi://pay?pa=m75271955@okhdfcbank&pn=Payment&am=39&cu=INR"
+                class="action-card"
+                id="bioCard"
+                aria-label="View My Bio"
+            >
+
+                <div class="action-icon">
+
+                    <i
+                        class="fa-solid fa-video"
+                        aria-hidden="true"
+                    ></i>
+
+                </div>
+
+
+                <div class="action-content">
+
+                    <h2>
+                        Video Callㅤ [ Demo ]
+                    </h2>
+
+                    <p>
+                        First 3 Minutes / ₹39
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="attention-badge attention-badge--hot"
+                >
+
+                    <i
+                        class="fa-solid fa-fire"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        HOT
+                    </span>
+
+                </span>
+
+
+                
+
+            </a>
+
+
+
+            <!-- =================================================
+                 INSTAGRAM
+            ================================================== -->
+
+            <a
+                href="upi://pay?pa=m75271955@okhdfcbank&pn=Payment&am=99&cu=INR"
+                class="action-card"
+                id="instagramCard"
+                aria-label="View My Instagram"
+            >
+
+                <div class="action-icon">
+
+                     <i
+                        class="fa-solid fa-video"
+                        aria-hidden="true"
+                    ></i>
+
+                </div>
+
+
+                <div class="action-content">
+
+                    <h2>
+                        Private Call 
+                    </h2>
+
+                    <p>
+                        First 10 Minutes / ₹99
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="attention-badge attention-badge--recommended"
+                >
+
+                    <i
+                        class="fa-solid fa-star"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        RECOMMENDED
+                    </span>
+
+                </span>
+
+
+                
+
+            </a>
+
+
+
+            <!-- =================================================
+                 STORE
+            ================================================== -->
+
+            <a
+                href="upi://pay?pa=m75271955@okhdfcbank&pn=Payment&am=499&cu=INR"
+                class="action-card"
+                id="storeCard"
+                aria-label="Visit My Store"
+            >
+
+                <div class="action-icon">
+
+                    <i
+                        class="fa-brands fa-whatsapp"
+                        aria-hidden="true"
+                    ></i>
+
+                </div>
+
+
+                <div class="action-content">
+
+                    <h2>
+                        Real Meet
+                    </h2>
+
+                    <p>
+                        Advance Booking ₹499
+                    </p>
+
+                </div>
+
+
+                <i
+                    class="fa-solid fa-chevron-right action-arrow"
+                    aria-hidden="true"
+                ></i>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FEATURED IN
+        ====================================================== -->
+
+        <section
+            class="featured-section"
+            aria-label="Featured in"
+        >
+
+            <div class="featured-heading">
+
+                <span class="featured-line"></span>
+
+                <span class="featured-title">
+                    Featured In
+                </span>
+
+                <span class="featured-line"></span>
+
+            </div>
+
+
+            <div class="featured-logos">
+
+                <img
+                    id="brandLogos"
+                    src="assets/images/logos.png"
+                    alt="Featured brands"
+                    class="logos-image"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="page-footer">
+
+            <span>
+                © 2025 All Rights Reserved
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

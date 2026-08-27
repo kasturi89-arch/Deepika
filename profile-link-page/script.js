@@ -4,7 +4,7 @@
     const profiles = [
         {
             image: "assets/profiles/profile1.jpg",
-            name: "Pavithra",
+            name: "Madhumita",
             bio: "Living, Laughing & Loving Life ✨",
             place: "Kerala",
             age: 27,
@@ -13,16 +13,16 @@
 
         {
             image: "assets/profiles/profile2.jpg",
-            name: "Kasturi",
+            name: "Anjana",
             bio: "I'm Hotter than your ex 💋",
             place: "Ooty",
-            age: 31,
+            age: 25,
             status: "Married"
         },
 
         {
             image: "assets/profiles/profile3.jpg",
-            name: "Keerthana",
+            name: "Kavya",
             bio: "Making Every Moment Beautiful 🌸",
             place: "Pondy",
             age: 27,
@@ -31,7 +31,7 @@
 
         {
             image: "assets/profiles/profile4.jpg",
-            name: "Mohana",
+            name: "Sreelakshmi",
             bio: "Life Is Better With A Smile 💫",
             place: "Goa",
             age: 30,
